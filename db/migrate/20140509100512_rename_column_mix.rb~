@@ -1,0 +1,4 @@
+class RenameColumnMix < ActiveRecord::Migration
+  def change
+  end
+end

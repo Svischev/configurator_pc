@@ -1,0 +1,22 @@
+<% @description_of_components.each do |description_of_component| %>
+
+	<div class="class_div_full_description_<%= description_of_component.name %>">
+
+		<div class="class_parent_window_full_discription"></div>
+
+		<div class="class_window_full_discription">
+
+			<div class="class_close_in_window_full_discription">
+				Закрыть
+			</div>
+
+			<div class="class_content_in_window_full_discription">
+				<%= image_tag("#{description_of_component.name}.png", {size: "300x260", class: "class_float_left" } ) %>
+				<p><%= description_of_component.full_description %></p>
+			</div>
+
+		</div>
+
+	</div>
+
+<% end %>

@@ -1,0 +1,174 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$serui: #323232;
+$svetlo_seruy : #e5e5e5;
+$white: #ffffff;
+$chernuy: #000000;
+$serebristuy: #C0C0C0;
+$biruzovuy: #00CED1;
+$otstyp_pravue_bloki: 60%;
+
+$cvet_blokov: $chernuy;
+$cvet_shrifta_na_blokah: $white;
+
+@mixin kontor_bloka
+{
+	//outline: 1px solid #FAA21A; //kontor bloka;
+}
+
+
+@mixin kryglue_yglu
+{
+	//border-radius: 20px;
+	//box-shadow: 0 0 5px #e7d5c0;
+	border-radius: 20px;
+	box-shadow: 0 0 30px $chernuy;
+}
+
+h1 {
+	text-align: center;
+}
+
+body
+{
+	padding: 0;
+	margin: 0;
+	font-size: 12pt;
+}
+
+//**********
+// OBUCHNUE SSULKI:
+//**********
+
+A {
+	color: $chernuy;
+}
+
+A:visited {
+	color: $chernuy;
+}
+
+A:hover {
+	color: $chernuy;
+	background: $white;
+}
+
+//**********
+// SSULKI NA CHERNOM FONE:
+//**********
+
+A.black_fon {
+	color: $white;
+}
+
+A:visited.black_fon {
+	color: $white;
+}
+
+//A:active {
+	//color: $biruzovuy;
+//}
+
+A:hover.black_fon {
+	color: $biruzovuy;
+	background: $chernuy;
+}
+
+//**********
+// SSULKI NA LEVOY PANELI:
+//**********
+.class_link_sidebarL {
+	font-size: 14pt;
+	text-decoration: none;
+}
+.class_li_sidebarL {
+	margin: 20px 0;
+}
+
+.clear 
+{
+	clear:both;
+}
+
+#div_wrapper
+{
+	padding: 0;
+	margin: 0;
+	@include kontor_bloka;
+}
+
+#div_sidebarL 
+{
+	background-color: $cvet_blokov;
+	font-color: $cvet_shrifta_na_blokah; 
+	width: 20%;
+	//margin: 0% 80% 0% 0%;
+	height: 100%;
+	float: left;
+	//font-size: 14pt;
+	//opacity: 10;
+	//padding: 1%;
+	@include kontor_bloka;
+	@include kryglue_yglu;
+}
+
+#div_content
+{
+	//width: 79%;
+	height: 97%;
+	margin: 0% 0% 0% 21%;
+	padding: 1%;
+	//font-size: 12pt;
+	background-color: white;
+	@include kontor_bloka;
+	@include kryglue_yglu;
+}
+
+ul.ul_menu_main li 
+{
+	display: inline;
+}
+
+
+ul.ul_menu_main 
+{
+	margin: 0;
+	padding: 0;	
+}
+
+#div_menu_main
+{
+	float: right;
+	font-size: 14pt;
+	width: 50%;
+	margin: 0;
+	padding: 0;	
+	@include kontor_bloka;
+}
+
+#div_wrapper_sidebarL_content
+{
+	margin: 0 5%;
+	width: 90%;
+	height: 800px;
+	@include kontor_bloka;
+}
+
+#div_polosaUP
+{
+	font-color: $white; 
+	background-color:	$chernuy;
+	height: 30%;
+	margin: 0;
+	padding: 0;	
+	box-shadow: 0 0 30px $chernuy;
+}
+
+#div_sidebarUp
+{
+	@include kontor_bloka;
+	width: 100%;
+	height: 100px;
+}

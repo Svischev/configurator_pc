@@ -1,0 +1,19 @@
+<p>Теперь необходимо решить, какой Вам нужен компьютер.</p>
+
+<div id="id_selectComponents_images_pc">
+
+	<% @description_of_pcs.each do |description_of_pc| %>
+				
+		<%= link_to url_options  = {action: "showStep4", idSelectPc: description_of_pc.id },
+							  html_options = { method: :post, class: "class_link_image" } do %>	
+		
+			<div class="class_selectComponents_image_and_description">	
+				<div class="class_selectComponents_image_pc"><%= image_tag("PC/#{description_of_pc.name}.png", size: "170x149") %></div>
+				<div class="class_selectComponents_description_image"><%= description_of_pc.description %></div>
+			</div>
+
+		<% end %>
+
+	<% end %>
+
+</div>

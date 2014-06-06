@@ -1,0 +1,20 @@
+Теперь необходимо определиться с ценовой гатегорией нашего компьютера.
+Цена берется только за системный блок и его компоненты. Перефирию не включаем.
+Если Ваш бюджет выше максимально предложенного, мы советуем Вам выбрать максимально 
+предложенную комплектацию сервисом и оставить часть денег для апгрейда комплектующих в будущем.
+<br><br><br><br><br>
+<div id="id_selectComponents_price_ranges_pc">
+	<% @price_ranges.each do |price_range| %>		
+		
+			<%= link_to url_options  = { action: "showStep3", idSelectPriceRange: price_range.id }, 
+									html_options = { method: :post } do %>
+				
+			<div class="class_selectComponents_price_range_pc">	
+					<h3><%= price_range.name %></h3>
+					( <%= price_range.range %> )
+				</div>
+
+			<% end %>		
+
+	<% end %>
+</div>

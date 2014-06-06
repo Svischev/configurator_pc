@@ -1,0 +1,33 @@
+<%= render "shared/full_description_for_components.html" %>
+
+<br>
+<h1>Описание основных комплектующих компьютера</h1>
+
+<h3>Для подробного описания, щелкните на комплектующие.</h3>
+
+<div id="id_information_images">
+	<% @description_of_components.each do |description_of_component| %>
+			<div class="class_information_image class_information_image_<%= description_of_component.name %>">
+				<%= image_tag("#{description_of_component.name}.png", size: "150x131") %>
+				<%= description_of_component.rus_name %>
+<!--
+<%= link_to image_tag("#{description_of_component.name}.png", size: "150x131") +  description_of_component.rus_name, 
+										{ 
+											url: information_path,
+										  id: description_of_component.id 
+										},
+										{
+											class: "class_link_image"
+										}%>	
+-->		
+			</div>	
+	<% end %>
+
+</div>
+
+<% @description_of_components.each do |description_of_component| %>
+	<div class="class_information_description_image class_information_description_image_<%= description_of_component.name %>">
+		<%= description_of_component.description %>
+	</div>
+<% end %>
+

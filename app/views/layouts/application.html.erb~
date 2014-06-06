@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+  	<title><%= full_title(yield(:title)) %></title>
+  	<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+		<%= javascript_include_tag "information" %>
+  	<%= csrf_meta_tags %>
+	</head>
+
+	<body>	
+
+		<div id="div_wrapper">
+
+			<div id="div_sidebarUp">
+				<div id="div_polosaUP">
+					<div id="div_menu_main"><%= render "layouts/header" %></div>
+				</div>
+			</div>
+
+			<div id="div_wrapper_menu_content">
+
+				<div id="div_sidebarL"><%= render "layouts/sidebarL" %></div>
+							
+  			<div id="div_content">
+					<% if flash.any? %>
+						<% flash.each do |key, value| %>
+							<%= value %><br>
+						<% end %>
+					<% end %>
+					<%= yield %>
+				</div>			
+			
+			</div>
+
+		</div>
+
+		<div class="clear"></div>	
+		<div><%= debug(params) if Rails.env.development? %></div>	
+
+	</body>
+
+</html>

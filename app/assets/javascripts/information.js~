@@ -1,0 +1,165 @@
+$(document).ready(function() 
+{
+
+// Наведение:
+	//$('img').hover(
+	$(".class_information_image").hover(
+	function()
+	{	
+		$(this).addClass('class_hover');
+	},
+	function() 
+	{ 
+		$(this).removeClass('class_hover');
+	});
+
+// Наведение на блок с hdd:
+	$(".class_information_image_hdd").hover(
+		function()
+		{
+			show_div_with_class('class_information_description_image_hdd');
+		},
+		function()
+		{
+			unshow_div_with_class('class_information_description_image_hdd');
+		});
+
+// Показать полное описание HDD:
+	$(".class_information_image_hdd").click(
+	function()
+	{	
+		show_div_with_class('class_div_full_description_hdd');
+	});
+
+// Наведение на блок с motherboard:
+	$(".class_information_image_motherboard").hover(
+		function()
+		{
+			show_div_with_class('class_information_description_image_motherboard');
+		},
+		function()
+		{
+			unshow_div_with_class('class_information_description_image_motherboard');
+		});
+
+// Показать полное описание motherboard:
+	$(".class_information_image_motherboard").click(
+	function()
+	{	
+		show_div_with_class('class_div_full_description_motherboard');
+	});
+
+// Наведение на блок с processor:
+	$(".class_information_image_processor").hover(
+		function()
+		{
+			show_div_with_class('class_information_description_image_processor');
+		},
+		function()
+		{
+			unshow_div_with_class('class_information_description_image_processor');
+		});
+
+// Показать полное описание processor:
+	$(".class_information_image_processor").click(
+	function()
+	{	
+		show_div_with_class('class_div_full_description_processor');
+	});
+
+// Наведение на блок с ram:
+	$(".class_information_image_ram").hover(
+		function()
+		{
+			show_div_with_class('class_information_description_image_ram');
+		},
+		function()
+		{
+			unshow_div_with_class('class_information_description_image_ram');
+		});
+
+// Показать полное описание ram:
+	$(".class_information_image_ram").click(
+	function()
+	{	
+		show_div_with_class('class_div_full_description_ram');
+	});
+
+// Наведение на блок с systemBlock:
+	$(".class_information_image_systemBlock").hover(
+		function()
+		{
+			show_div_with_class('class_information_description_image_systemBlock');
+		},
+		function()
+		{
+			unshow_div_with_class('class_information_description_image_systemBlock');
+		});
+
+// Показать полное описание systemBlock:
+	$(".class_information_image_systemBlock").click(
+	function()
+	{	
+		show_div_with_class('class_div_full_description_systemBlock');
+	});
+
+// Наведение на блок с videoCard:
+	$(".class_information_image_videoCard").hover(
+		function()
+		{
+			show_div_with_class('class_information_description_image_videoCard');
+		},
+		function()
+		{
+			unshow_div_with_class('class_information_description_image_videoCard');
+		});
+																				
+// Показать полное описание videoCard:
+	$(".class_information_image_videoCard").click(
+	function()
+	{	
+		show_div_with_class('class_div_full_description_videoCard');
+	});
+
+// Show block:
+	$('#id_description_image').hide().show( 500 );
+
+// Щелчок кнопки "Закрыть" в окне полного описания hdd:
+  $('.class_close_in_window_full_discription').click(
+		function()
+		{
+			//document.getElementById('id_parent_popup').style.display='none';
+			//document.getElementById('id_popup').style.display='none';
+
+			unshow_div_with_class('class_div_full_description_hdd');
+			unshow_div_with_class('class_div_full_description_motherboard');
+			unshow_div_with_class('class_div_full_description_processor');
+			unshow_div_with_class('class_div_full_description_ram');
+			unshow_div_with_class('class_div_full_description_systemBlock');
+			unshow_div_with_class('class_div_full_description_hdd');
+
+		});
+
+});
+
+	function show_div_with_class(p_ClassName)
+	{
+		var divs = document.getElementsByClassName(p_ClassName);
+		for (var i=0; i<divs.length; i++)
+		{
+			divs[i].style.display='block';
+		}
+	}
+
+	function unshow_div_with_class(p_ClassName) 
+	{ 
+		var divs = document.getElementsByClassName(p_ClassName);
+		for (var i=0; i<divs.length; i++)
+		{
+			divs[i].style.display='none';
+		}
+	}
+
+
+
+

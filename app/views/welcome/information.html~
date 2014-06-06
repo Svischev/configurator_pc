@@ -1,0 +1,40 @@
+<div id="id_images">
+
+	<div id="id_image"><%= link_to image_tag("motherboard.gif", size: "150x131"), 
+									url: { controller: "welcome", action: "act1" },
+									name: "mb" %>
+	</div>
+
+	<div id="id_image"><%= link_to image_tag("Proc.jpg", size: "150x131"), 
+									url: { controller: "welcome", action: "information" },
+									name: "proc" %>
+	</div>	
+
+	<div id="id_image"><%= link_to image_tag("hdd.jpg", size: "150x131"), 
+									url: { controller: "welcome", action: "information" },
+									name: "hdd" %>
+	</div>	
+
+	<div id="id_image"><%= link_to image_tag("RAM.jpg", size: "150x131"), 
+									url: { controller: "welcome", action: "information" },
+									name: "ram" %>
+	</div>	
+
+	<div id="id_image"><%= link_to image_tag("videokarta.jpg", size: "150x131"), 
+									url: { controller: "welcome", action: "information" },
+									name: "videokarta" %>
+	</div>	
+
+	<div id="id_image"><%= link_to image_tag("KorpusPowerBlock.jpg", size: "150x131"), 
+									url: { controller: "welcome", action: "information" },
+									name: "KorpusPowerBlock" %>
+	</div>	
+
+</div>
+
+<div id="id_description_image">
+	<div id="vertical_line"></div>
+	<%= @v_name %>
+</div>
+
+

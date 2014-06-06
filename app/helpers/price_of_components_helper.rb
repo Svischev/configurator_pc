@@ -1,0 +1,2 @@
+module PriceOfComponentsHelper
+end

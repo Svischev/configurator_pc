@@ -1,0 +1,172 @@
+// Place all the styles related to the Information controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$white: #ffffff;
+$black: #000000;
+
+@mixin kryglue_yglu
+{
+	border-radius: 20px;
+	box-shadow: 0 0 30px $black;
+}
+
+@mixin kontor_bloka
+{
+	//outline: 1px solid #FAA21A; //kontor bloka;
+}
+
+A.class_link_image {
+	color: $black;
+	text-decoration: none;
+}
+
+A:visited.class_link_image {
+	color: $black;
+}
+
+//A:active {
+	//color: $biruzovuy;
+//}
+
+A:hover.class_link_image {
+	color: black;
+	background: $white;
+}
+
+.class_information_image
+{	 	
+	float: left;
+	width: 33%;//200px;
+	height: 175px;
+	text-align:center;
+	//padding: auto 0;
+	@include kontor_bloka;
+}
+
+#id_information_images 
+{
+	float: left;
+	width: 60%;//600px;
+	height: 100%;
+//	margin: auto auto;
+//	padding: 70px; //otstup vne kontora blocka
+	@include kontor_bloka;
+}
+
+.class_information_description_image
+{
+	//width: 100% - $otstyp_pravue_bloki;
+	height: 100%;
+	margin: 0% 0% 0% 60%;
+	//padding: 20% 20% 20% 20%;
+	//font-size: 12pt;
+	//background-color: white;
+	text-align:center;
+	@include kontor_bloka;	
+}
+
+.class_information_description_image_hdd {
+	display: none;
+}
+
+.class_information_description_image_motherboard {
+	display: none;;
+}
+
+.class_information_description_image_processor {
+	display: none;
+}
+
+.class_information_description_image_ram {
+	display: none;
+}
+
+.class_information_description_image_systemBlock {
+	display: none;
+}
+
+.class_information_description_image_videoCard {
+	display: none;
+}
+
+//**********
+// БЛОК ДЛЯ ПОЛНОГО ОПИСАНИЯ (ЗАТЕМНЕНИЕ ФОНА)
+//**********
+
+.class_div_full_description_hdd {
+	display: none;
+}
+
+.class_div_full_description_motherboard {
+	display: none;
+}
+
+.class_div_full_description_processor {
+	display: none;
+}
+
+.class_div_full_description_ram {
+	display: none;
+}
+
+.class_div_full_description_systemBlock {
+	display: none;
+}
+
+.class_div_full_description_videoCard {
+	display: none;
+}
+
+.class_parent_window_full_discription {
+	background: #000;
+	height: 100%;
+	width: 100%;
+	opacity: 0.80;
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	left: 0;	
+	//display: none;
+}
+
+.class_window_full_discription {
+	background-color: white;
+	height: 500px;
+	width: 900px;
+	//opacity: 1.00;
+	position: fixed;
+	top:10%;
+	left:10%;
+	z-index: 150;
+	color: #000;
+	outline: 10px solid #000; //kontor bloka;
+	//margin: 50px auto;
+	//display: none;
+}
+
+.class_content_in_window_full_discription {
+	height: 95%;
+	width: 100%;
+}
+
+.class_float_left {
+	float: left;
+}
+
+// Кнопка Close:
+.class_close_in_window_full_discription {
+	height: 5%;
+	width: 50%;
+	margin: 0 25%;
+	background-color: #000;
+	font-size: 16pt;
+	text-align: center;
+	color: $white;
+	//@include kryglue_yglu
+	border-bottom-right-radius: 40px;
+	border-bottom-left-radius: 40px;
+}
+.class_close_in_window_full_discription:hover {
+	cursor: pointer;
+}

@@ -1,0 +1,29 @@
+<%= javascript_include_tag "НаведениеНаКомплектующие" %>
+
+<div id="wrapper">
+	<div id="wrapper_content">
+<!--    <div id="div_menu_main"><%= render "menu_main" %></div> -->
+	 	<div id="div_sidebarL"><%= render "sidebarL" %></div> 	
+<!--   	<div id="div_sidebarR"><%= render "sidebarR" %></div> 	-->
+  		<div id="div_content"><%= render "content_information" %></div>			
+<!--    <div class="clear"></div>								-->
+<!--   	<div id="div_footer"><%= render "footer" %></div>		-->
+	</div>
+</div> 
+
+<h1>Щелкните по элементу для получения информации</h1>
+
+<div id="wrapper">	
+
+	<div class="clear"></div>
+
+	<div id="id_images">
+		<div id="id_image"><%= link_to image_tag("motherboard.gif", size: "300x264"), 
+									   	url: { controller: "welcome", action: "act1" },
+									   	name: "mb"  %></div>
+		<div id="id_image"><%= link_to image_tag("Процессор.jpg", size: "300x264"), 
+										url: { controller: "welcome", action: "act1" },
+										name: "proc"  %></div>
+		<div id="id_image"><%= @v_name %></div>
+	</div>
+</div>

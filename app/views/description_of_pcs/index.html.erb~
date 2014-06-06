@@ -1,0 +1,42 @@
+<h1>Listing description_of_pcs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>HDD percent of price</th>
+      <th>Motherboard percent of price</th>
+      <th>Processor percent of price</th>
+      <th>RAM percent of price</th>
+      <th>SystemBlock percent of price</th>
+      <th>VideoCard percent of price</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @description_of_pcs.each do |description_of_pc| %>
+      <tr>
+        <td><%= description_of_pc.name %></td>
+        <td><%= description_of_pc.description %></td>
+        <td><%= description_of_pc.hdd_percent_of_price %></td>
+        <td><%= description_of_pc.motherboard_percent_of_price %></td>
+        <td><%= description_of_pc.processor_percent_of_price %></td>
+        <td><%= description_of_pc.ram_percent_of_price %></td>
+        <td><%= description_of_pc.systemBlock_percent_of_price %></td>
+        <td><%= description_of_pc.videoCard_percent_of_price %></td>
+
+        <td><%= link_to 'Show', description_of_pc %></td>
+        <td><%= link_to 'Edit', edit_description_of_pc_path(description_of_pc) %></td>
+        <td><%= link_to 'Destroy', description_of_pc, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Description of pc', new_description_of_pc_path %>

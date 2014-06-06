@@ -1,0 +1,37 @@
+<h1>Listing price_ranges</h1>
+
+<table>
+  <thead>
+    <tr>
+			<th>id</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Min</th>
+      <th>Max</th>
+			<th>Range</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @price_ranges.each do |price_range| %>
+      <tr>
+        <td><%= price_range.id %></td>
+        <td><%= price_range.name %></td>
+        <td><%= price_range.description %></td>
+        <td><%= price_range.min %></td>
+        <td><%= price_range.max %></td>
+        <td><%= price_range.range %></td>
+        <td><%= link_to 'Show', price_range %></td>
+        <td><%= link_to 'Edit', edit_price_range_path(price_range) %></td>
+        <td><%= link_to 'Destroy', price_range, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Price range', new_price_range_path %>

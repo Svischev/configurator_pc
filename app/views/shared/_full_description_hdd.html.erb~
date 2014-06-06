@@ -1,0 +1,18 @@
+<div class="class_div_full_description">
+
+	<div id="id_parent_popup"></div>
+
+	<div id="id_popup">
+
+		<div class="class_close_in_window_full_discription">
+			Закрыть
+		</div>
+
+		<div class="class_content_in_window_full_discription">
+			<%= image_tag("hdd.png", size: "300x260") %>
+			<p>Тут будет описание жесткого диска</p>
+		</div>
+
+	</div>
+
+</div>

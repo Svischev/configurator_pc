@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @description_of_pc.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @description_of_pc.description %>
+</p>
+
+<p>
+  <strong>hdd_percent_of_price:</strong>
+  <%= @description_of_pc.hdd_percent_of_price %>
+</p>
+
+<p>
+  <strong>motherboard_percent_of_price:</strong>
+  <%= @description_of_pc.motherboard_percent_of_price %>
+</p>
+
+<p>
+  <strong>processor_percent_of_price:</strong>
+  <%= @description_of_pc.processor_percent_of_price %>
+</p>
+
+<p>
+  <strong>ram_percent_of_price:</strong>
+  <%= @description_of_pc.ram_percent_of_price %>
+</p>
+
+<p>
+  <strong>systemBlock_percent_of_price:</strong>
+  <%= @description_of_pc.systemBlock_percent_of_price %>
+</p>
+
+<p>
+  <strong>videoCard_percent_of_price:</strong>
+  <%= @description_of_pc.videoCard_percent_of_price %>
+</p>
+
+<%= link_to 'Edit', edit_description_of_pc_path(@description_of_pc) %> |
+<%= link_to 'Back', description_of_pcs_path %>

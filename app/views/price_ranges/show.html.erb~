@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @price_range.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @price_range.description %>
+</p>
+
+<p>
+  <strong>Mix:</strong>
+  <%= @price_range.mix %>
+</p>
+
+<p>
+  <strong>Max:</strong>
+  <%= @price_range.max %>
+</p>
+
+<p>
+  <strong>Range:</strong>
+  <%= @price_range.range %>
+</p>
+
+<%= link_to 'Edit', edit_price_range_path(@price_range) %> |
+<%= link_to 'Back', price_ranges_path %>

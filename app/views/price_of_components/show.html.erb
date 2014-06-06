@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Price range:</strong>
+  <%= @price_of_component.price_range_id %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @price_of_component.price %>
+</p>
+
+<p>
+  <strong>Component:</strong>
+  <%= @price_of_component.component %>
+</p>
+
+<p>
+  <strong>Full name:</strong>
+  <%= @price_of_component.full_name %>
+</p>
+
+<%= link_to 'Edit', edit_price_of_component_path(@price_of_component) %> |
+<%= link_to 'Back', price_of_components_path %>

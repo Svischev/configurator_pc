@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @selected_options_of_pc.user_id %>
+</p>
+
+<p>
+  <strong>Description of pc:</strong>
+  <%= @selected_options_of_pc.description_of_pc_id %>
+</p>
+
+<p>
+  <strong>Price range:</strong>
+  <%= @selected_options_of_pc.price_range_id %>
+</p>
+
+<%= link_to 'Edit', edit_selected_options_of_pc_path(@selected_options_of_pc) %> |
+<%= link_to 'Back', selected_options_of_pcs_path %>

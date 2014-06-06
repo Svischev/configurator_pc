@@ -1,0 +1,15 @@
+<ul class="ul_menu_left">
+
+<li>
+<%= link_to "На главную страницу", 
+		{ controller: "welcome", action: "index" } %></div>
+</li>
+
+<li>
+<%= link_to "Знакомство с комплектующими", 
+		{ controller: "welcome", action: "information" } %></div>
+</li>
+
+</ul>
+
+

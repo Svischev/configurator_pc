@@ -1,0 +1,66 @@
+<p>Вы выбрали:</p>
+<p><%= @price_range.name %> в диапазоне от <%= @price_range.min %>р до <%= @price_range.max %>р</p>
+<p><%= @description_of_pc.description %></p>
+
+<!--
+
+<p>Наша система советует Вам:</p>
+
+<% 3.times do |i| %>
+
+	<% price = @price_range.min if i == 0 %>
+	<% price = ( @price_range.max + @price_range.min ) / 2 if i == 1 %>
+	<% price = @price_range.max if i == 2 %>
+
+	<h3>При средней оценочной стоимости <%= price %>р:</h3>
+	Жесткий диск(HDD): 				
+		<%= price.to_i / 100 * @description_of_pc.hdd_percent_of_price %>р<br>
+	Материнская плата: 				
+		<%= price.to_i / 100 * @description_of_pc.motherboard_percent_of_price %>р<br>
+	Процессор: 		      			
+		<%= price.to_i / 100 * @description_of_pc.processor_percent_of_price %>р<br>
+	Оперативная память: 		 	
+		<%= price.to_i / 100 * @description_of_pc.ram_percent_of_price %>р<br>
+	Корпус системного блока и блок питания: 	
+		<%= price.to_i / 100 * @description_of_pc.systemBlock_percent_of_price %>р<br>
+	Видео карта:		 					
+		<%= price.to_i / 100 * @description_of_pc.videoCard_percent_of_price %>р<br>
+
+<% end %>
+
+-->
+
+<p>Итогом имеем:</p>
+		<p>	
+	  	Жесткий диск(HDD):
+			<%= @price_range.min.to_i / 100 * @description_of_pc.hdd_percent_of_price %>р - 
+			<%= @price_range.max.to_i / 100 * @description_of_pc.hdd_percent_of_price %>р
+		</p>
+		<p>
+			Материнская плата: 
+			<%= @price_range.min.to_i / 100 * @description_of_pc.motherboard_percent_of_price %>р - 
+			<%= @price_range.max.to_i / 100 * @description_of_pc.motherboard_percent_of_price %>р
+		</p>
+		<p> 
+			Процессор: 		     			
+			<%= @price_range.min.to_i / 100 * @description_of_pc.processor_percent_of_price %>р - 
+			<%= @price_range.max.to_i / 100 * @description_of_pc.processor_percent_of_price %>р
+		</p>
+		<p>	
+			Оперативная память:  	
+			<%= @price_range.min.to_i / 100 * @description_of_pc.ram_percent_of_price %>р - 
+			<%= @price_range.max.to_i / 100 * @description_of_pc.ram_percent_of_price %>р
+		</p>
+		<p>
+			Корпус системного блока и блок питания: 
+			<%= @price_range.min.to_i / 100 * @description_of_pc.systemBlock_percent_of_price %>р - 
+			<%= @price_range.max.to_i / 100 * @description_of_pc.systemBlock_percent_of_price %>р
+		</p>
+		<p>
+			Видео карта:		 					
+			<%= @price_range.min.to_i / 100 * @description_of_pc.videoCard_percent_of_price %>р - 
+			<%= @price_range.max.to_i / 100 * @description_of_pc.videoCard_percent_of_price %>р
+		</p>
+
+<p>Итак, максимальная сумма, которую мы можем потратить на компьютер равна <%= @price_range.max %></p>
+<p>Теперь перейдем непосредственно к выбору каждого компонента.</p>

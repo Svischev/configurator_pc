@@ -1,0 +1,26 @@
+# Place all the behaviors and hooks related to the matching controller here.
+# All this logic will automatically be available in application.js.
+# You can use CoffeeScript in this file: http://coffeescript.org/
+
+#$(document).ready(function() 
+#{
+
+// Yvelichenie:
+	$('img').hover(
+	function()
+	{	
+		$(this).addClass('yvelichenie_image');
+	},
+	function() 
+	{ 
+		$(this).removeClass('yvelichenie_image');
+	});
+
+// Show block:
+	$('#id_description_image')
+		.hide()
+//		.appendTo('body')
+		.show( 500 )
+		;
+
+#});

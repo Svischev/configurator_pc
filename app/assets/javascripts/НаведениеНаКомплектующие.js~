@@ -1,0 +1,20 @@
+$(document).ready(function() 
+{
+
+	$('img').hover(
+	function()
+	{	
+		$(this).addClass('class');
+	},
+	function() 
+	{ 
+		$(this).removeClass('class');
+	});
+
+	$('#id_description_image')
+		.hide()
+//		.appendTo('body')
+		.show( 500 )
+		;
+
+});

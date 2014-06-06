@@ -1,0 +1,29 @@
+<%= form_for(@selected_options_of_pc) do |f| %>
+  <% if @selected_options_of_pc.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@selected_options_of_pc.errors.count, "error") %> prohibited this selected_options_of_pc from being saved:</h2>
+
+      <ul>
+      <% @selected_options_of_pc.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :description_of_pc_id %><br>
+    <%= f.number_field :description_of_pc_id %>
+  </div>
+  <div class="field">
+    <%= f.label :price_range_id %><br>
+    <%= f.number_field :price_range_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

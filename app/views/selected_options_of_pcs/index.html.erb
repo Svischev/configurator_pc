@@ -1,0 +1,31 @@
+<h1>Listing selected_options_of_pcs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Description of pc</th>
+      <th>Price range</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @selected_options_of_pcs.each do |selected_options_of_pc| %>
+      <tr>
+        <td><%= selected_options_of_pc.user_id %></td>
+        <td><%= selected_options_of_pc.description_of_pc_id %></td>
+        <td><%= selected_options_of_pc.price_range_id %></td>
+        <td><%= link_to 'Show', selected_options_of_pc %></td>
+        <td><%= link_to 'Edit', edit_selected_options_of_pc_path(selected_options_of_pc) %></td>
+        <td><%= link_to 'Destroy', selected_options_of_pc, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Selected options of pc', new_selected_options_of_pc_path %>

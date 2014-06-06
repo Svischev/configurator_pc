@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @description_of_component.name %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @description_of_component.rus_name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @description_of_component.description %>
+</p>
+
+<p>
+  <strong>Full description:</strong>
+  <%= @description_of_component.full_description %>
+</p>
+
+<%= link_to 'Edit', edit_description_of_component_path(@description_of_component) %> |
+<%= link_to 'Back', description_of_components_path %>

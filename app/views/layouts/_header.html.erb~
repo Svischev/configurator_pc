@@ -1,0 +1,23 @@
+<header>	
+	<nav>
+
+		<ul class="ul_menu_main">
+
+			<li><%= link_to("Home", root_path, class: "black_fon") %></li>
+			<li>link_to("Admin", admin_path, class: "black_fon")</li>
+
+			<% if signed_in? %>
+
+				<li><%= link_to "Sign out", signout_path, method: "delete", class: "black_fon" %></li>
+				<li><%= link_to "Profile", '#', class: "black_fon" %></li>
+
+			<% else %>
+
+				<li><%= link_to "Войти", signin_path, class: "black_fon" %></li>
+				<li><%= link_to "Регистрация", signup_path, class: "black_fon" %></li>	
+	
+			<% end %>				
+		</ul>
+
+	</nav>	
+</header>

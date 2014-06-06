@@ -1,0 +1,12 @@
+<!--
+<%=link_to(image_tag("motherboard.gif", size: "300x264), {controller: "welcome", action: "act1"} ) %>
+
+	<div id="id_image"><%= image_tag "motherboard.gif", size: "300x264" %></div> 300x168 -->
+
+<%= link_to (image_tag("motherboard.gif", size: "300x264) + "123", 
+	url_for({controller: "welcome", action: "act3"}) %>
+
+
+<div id="id_image"><%= image_tag "motherboard.gif", size: "300x264 %></div>
+
+	<%= javascript_include_tag "information" %>

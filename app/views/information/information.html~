@@ -1,0 +1,19 @@
+<div id="id_images">
+
+	<% @description_of_components.each do |description_of_component| %>
+			<div class="class_image"><%= link_to image_tag("#{description_of_component.name}.png", size: "150x131"), 
+										url: information_path,
+										id: description_of_component.id %>			
+			</div>	
+	<% end %>
+
+</div>
+
+<div class="description_image">
+		<% if !@description_of_component.nil? %>
+			<%= @description_of_component.description %>
+		<% end %>
+
+</div>
+
+

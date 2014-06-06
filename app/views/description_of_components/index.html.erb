@@ -1,0 +1,35 @@
+<h1>Listing description_of_components</h1>
+
+<table>
+  <thead>
+    <tr>
+			<th>id</th>
+      <th>Name</th>
+			<th>Rus name</th>
+      <th>Description</th>
+			<th>Full description</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @description_of_components.each do |description_of_component| %>
+      <tr>
+				<td><%= description_of_component.id %></td>
+        <td><%= description_of_component.name %></td>
+        <td><%= description_of_component.rus_name %></td>
+        <td><%= description_of_component.description %></td>
+				<td><%= description_of_component.full_description %></td>
+        <td><%= link_to 'Show', description_of_component %></td>
+        <td><%= link_to 'Edit', edit_description_of_component_path(description_of_component) %></td>
+        <td><%= link_to 'Destroy', description_of_component, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Description of component', new_description_of_component_path %>

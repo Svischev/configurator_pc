@@ -1,0 +1,4 @@
+json.array!(@description_of_pcs) do |description_of_pc|
+  json.extract! description_of_pc, :name, :description
+  json.url description_of_pc_url(description_of_pc, format: :json)
+end

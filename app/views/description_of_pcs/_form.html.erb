@@ -1,0 +1,49 @@
+<%= form_for(@description_of_pc) do |f| %>
+  <% if @description_of_pc.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@description_of_pc.errors.count, "error") %> prohibited this description_of_pc from being saved:</h2>
+
+      <ul>
+      <% @description_of_pc.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :hdd_percent_of_price %><br>
+    <%= f.text_field :hdd_percent_of_price %>
+  </div>
+  <div class="field">
+    <%= f.label :motherboard_percent_of_price %><br>
+    <%= f.text_field :motherboard_percent_of_price %>
+  </div>
+  <div class="field">
+    <%= f.label :processor_percent_of_price %><br>
+    <%= f.text_field :processor_percent_of_price %>
+  </div>
+  <div class="field">
+    <%= f.label :ram_percent_of_price %><br>
+    <%= f.text_field :ram_percent_of_price %>
+  </div>
+  <div class="field">
+    <%= f.label :systemBlock_percent_of_price %><br>
+    <%= f.text_field :systemBlock_percent_of_price %>
+  </div>
+  <div class="field">
+    <%= f.label :videoCard_percent_of_price %><br>
+    <%= f.text_field :videoCard_percent_of_price %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

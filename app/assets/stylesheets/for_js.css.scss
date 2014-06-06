@@ -1,0 +1,23 @@
+$black: #000000;
+
+@mixin kryglue_yglu
+{
+	border-radius: 20px;
+	box-shadow: 0 0 30px $black;
+}
+
+.class_hover
+{
+	//color: #008000;
+	//width: 200px;
+	//height: 175px;
+	cursor: pointer;
+	@include kryglue_yglu;
+}
+
+.class_click
+{
+	width: 200px;
+	height: 175px;
+	@include kryglue_yglu;
+}

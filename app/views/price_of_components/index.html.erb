@@ -1,0 +1,33 @@
+<h1>Listing price_of_components</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Price range</th>
+      <th>Price</th>
+      <th>Component</th>
+      <th>Full name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @price_of_components.each do |price_of_component| %>
+      <tr>
+        <td><%= price_of_component.price_range_id %></td>
+        <td><%= price_of_component.price %></td>
+        <td><%= price_of_component.component %></td>
+        <td><%= price_of_component.full_name %></td>
+        <td><%= link_to 'Show', price_of_component %></td>
+        <td><%= link_to 'Edit', edit_price_of_component_path(price_of_component) %></td>
+        <td><%= link_to 'Destroy', price_of_component, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Price of component', new_price_of_component_path %>

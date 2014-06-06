@@ -1,0 +1,1 @@
+json.extract! @price_range, :name, :description, :mix, :max, :created_at, :updated_at

@@ -1,0 +1,15 @@
+<div id="wrapper">
+	<div id="wrapper_content">
+<!--    <div id="div_menu_main"><%= render "menu_main" %></div> -->
+	 	<div id="div_sidebarL"><%= render "sidebarL" %></div> 	
+<!--   	<div id="div_sidebarR"><%= render "sidebarR" %></div> 	-->
+  		<div id="div_content"><%= render "content" %></div>			
+<!--    <div class="clear"></div>								-->
+<!--   	<div id="div_footer"><%= render "footer" %></div>		-->
+	</div>
+</div> 
+
+
+
+
+
